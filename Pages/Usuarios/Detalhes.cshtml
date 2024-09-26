@@ -1,0 +1,27 @@
+﻿@page "{id:int}"
+@model At_Net_Q4.Pages.Usuarios.DetalhesModel
+@{
+	ViewData["Title"] = "Detalhes do usuário";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div>
+	<label>Id:</label>
+	<span>@Model.Usuario.Id</span>
+</div>
+
+<div>
+	<label>Nome:</label>
+	<span>@Model.Usuario.Nome</span>
+</div>
+
+<div>
+	<label>E-mail:</label>
+	<span>@Model.Usuario.Email</span>
+</div>
+
+<div>
+	<label>Data de Nascimento:</label>
+	<span>@Model.Usuario.DataNascimento</span>
+</div>
+<a asp-asp-page="/Usuarios/Index">Voltar</a>

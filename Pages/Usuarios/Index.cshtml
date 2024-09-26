@@ -1,0 +1,46 @@
+﻿@page
+@model At_Net_Q4.Pages.Usuarios.IndexModel
+@{
+	ViewData["Title"] = "Cadastro de usuários";
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>
+	<table>
+		<thead>
+			<tr>
+<th>Id</th>
+<th>Usuario<th>
+<th>E-mail</th>
+<th>DataNascimento</th>
+</tr>
+
+		</thead>
+		<tbody>
+			@foreach(var usuario in Model.Usuarios)
+			{
+					<tr>
+						<td>
+							<a class="Usuario/Detalhes" asp-route-id="@usuario.Id">@usuario.Id </a>
+							</td>
+		<td>@usuario.Id</td>
+		<td>@usuario.Nome</td>
+		<td>@usuario.Email</td>
+		<td>@usuario.DataNascimento</td>
+		<td>
+			<a class="btn-outline-info" asp-page="/Usuarios/Detalhes"asp-route-id="@usuario.Id">Detalhar</a>
+				
+		</td>
+		</tr>
+				<td>
+				<a class="btn-outline-info" asp-page="/Usuarios/Editar"asp-route-id="@usuario.Id">Editar</a>
+				</td>
+
+			}
+			
+		</tbody>
+	</table>
+	
+	</p>
+
+

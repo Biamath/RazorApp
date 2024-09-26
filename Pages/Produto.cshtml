@@ -1,0 +1,39 @@
+﻿@page
+@model At_Net_Q4.Pages.ProdutoModel
+@{
+    ViewData["Title"] = "Cadastro de produtos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model.Produtos)
+        {
+                <tr>
+                    <td>@produto.Descricao</td>
+                    <td>@produto.Preco.ToString("C")</td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+
+<h5>Adicionar Novo Produto</h5>
+<form method="post">
+    <div>
+        <label for="Descricao"> Produto:</label>
+        <input type="text" asp-for="NovoProduto.Descricao" class="form-control" />
+    </div>
+    <div>
+        <label for="Preco">Preço:</label>
+        <input type="number" asp-for="NovoProduto.Preco" class="form-control" step="0.01" min="0" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Adicionar Produto</button>
+</form>
