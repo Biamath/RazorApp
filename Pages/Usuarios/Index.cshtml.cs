@@ -1,8 +1,6 @@
 using At_Net_Q4.Model;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-
-
 namespace At_Net_Q4.Pages.Usuarios
 {
    

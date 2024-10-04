@@ -11,6 +11,7 @@ namespace At_Net_Q4.Pages.Usuarios
 		{
 			var usuarios = CarregarUsuarios();
 			Usuario = usuarios.FirstOrDefault(u => u.Id == id);
+
 			if (Usuario == null)
 			{
 				return RedirectToPage("/Usuario/Index");
@@ -36,8 +37,6 @@ namespace At_Net_Q4.Pages.Usuarios
 						Nome = dados[1],
 						Email = dados[2],
 						DataNascimento = DateTime.Parse(dados[3])
-
-
 					};
 					Usuarios.Add(usuario);
 				}

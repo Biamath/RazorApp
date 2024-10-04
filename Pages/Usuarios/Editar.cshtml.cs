@@ -1,5 +1,4 @@
 using At_Net_Q4.Model;
-using At_Net_Q4.Pages;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -23,6 +22,7 @@ namespace At_Net_.Pages.Usuarios
 				return Page();
 			}
 			var linhas=System.IO.File.ReadAllLines("usuarios.txt").ToList();
+
 			for(int i = 0; i < linhas.Count; i++)
 			{
 				var dados = linhas[i].Split('|');
@@ -37,7 +37,6 @@ namespace At_Net_.Pages.Usuarios
 			return RedirectToPage("/Usuarios/Index");
 		}
 
-		
 		public int Id { get; private set; }
 
 		public List<Usuario> CarregarUsuarios()

@@ -9,31 +9,35 @@
 <form method="post">
     <div>
         <label asp-for="usuario.Id">ID:</label>
-        <input asp-for="usuario.Id" class="form-control" />
-        <span asp-validation-for="usuario.Id" class="text-danger"></span>
+        <input type="text"  id="Id" name="Usuario.Id"/>
+        < <input asp-for="usuario.Id" class="form-control" /> 
+        <<span asp-validation-for="usuario.Id" class="text-danger"></span> >
+     
     </div>
-
     <div>
         <label asp-for="usuario.Nome">Nome do usuário:</label>
-        <input asp-for="usuario.Nome" class="form-control" />
-        <span asp-validation-for="usuario.Nome" class="text-danger"></span>
+        <input type="text"  id="Nome" name="Usuario.Nome"/>
+         <<input asp-for="usuario.Nome" class="form-control" /> 
+        <span asp-validation-for="usuario.Nome" class="text-danger"></span> 
+       
     </div>
-
     <div>
         <label asp-for="usuario.Email">E-mail:</label>
-        <input asp-for="usuario.Email" class="form-control" />
-        <span asp-validation-for="usuario.Email" class="text-danger"></span>
+         <input type="text"  id="Email" name="Usuario.Email"/>
+         <input asp-for="usuario.Email" class="form-control" /> 
+          <span asp-validation-for="usuario.Email" class="text-danger"></span> 
+    
     </div>
-
     <div>
         <label asp-for="usuario.DataNascimento">Data de Nascimento:</label>
-        <input asp-for="usuario.DataNascimento" class="form-control" type="date" />
-        <span asp-validation-for="usuario.DataNascimento" class="text-danger"></span>
+         <input type="text"  id="DataNascimento" name="Usuario.DataNascimento"/>
+        <input asp-for="usuario.DataNascimento" class="form-control" type="date" /> 
+        <span asp-validation-for="usuario.DataNascimento" class="text-danger"></span> 
+      
     </div>
-
     <button type="submit" class="btn btn-primary mt-3">Cadastrar</button>
 </form>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+        <partial name="_ValidationScriptsPartial" />
 }

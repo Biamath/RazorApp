@@ -7,11 +7,10 @@ namespace At_Net_Q4.Pages.Usuarios
     public class CriarModel : PageModel
     {
         [BindProperty] 
-        public Usuario usuario { get; set; }
+        public Usuario? usuario { get; set; }
         public void OnGet()
         {
         }
-
 
         public IActionResult OnPost()
         {
@@ -27,7 +26,7 @@ namespace At_Net_Q4.Pages.Usuarios
                 using(var writer=new StreamWriter("usuarios.txt",true))
                 {
 
-                    writer.WriteLine(usuario.Nome+":"+usuario.Email+";"+usuario.DataNascimento);
+                    writer.WriteLine(usuario.Id+";"+usuario.Nome+";"+usuario.Email+";"+usuario.DataNascimento);
                     return RedirectToPage("/Usuarios/Index");
                 }
             }

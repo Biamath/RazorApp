@@ -43,7 +43,9 @@ namespace At_Net_Q4.Pages
             if (!string.IsNullOrWhiteSpace(NovoProduto.Descricao) && NovoProduto.Preco > 0)
             {
                 Produtos.Add(NovoProduto);
+                SalvarProdutosNaSessao();
                 CarregarProdutosDaSessao();
+                
             }
 
             return Page(); 
